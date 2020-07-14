@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baby-countdown</title>
+    <style>
+        body {
+            background: url("https://images.pexels.com/photos/325690/pexels-photo-325690.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .image {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: darkgreen;
+            font-size: 100px;
+        }
+
+        h2 {
+            color: #a531a1ab;
+            font-family: cursive;
+            text-align: center;
+            font-size: 40px;
+            /* line-height: px; */
+            font-weight: bold;
+        }
+
+        p {
+            text-align: center;
+            font-size: 130px;
+            color: rgb(17, 124, 190);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="/IMG_1.jpg" width="300" height=" 300" alt="">
+    <img src="/IMG_2.jpg" width="300" height=" 300" alt="">
+    <img src="https://source.unsplash.com/400x300/?baby boy" alt="Remote error loading">
+    <img src="/IMG_3.jpg" width="300" height=" 300" alt="">
+    <!-- <img src="/IMG_4.jpg" width="300" height=" 300" alt=""> -->
+    <h2>😍😍<strong>You are coming out soon.. We are all exited for you</strong>😍😍</h2>
+    <h1>Countdown has begins..</h1>
+    <p id="demo"></p>
+    <!-- <div class="image">
+    <img src="/IMG_3.jpg" width="200" height="200" > 
+</div> -->
+
+    <script>
+        var deadline = new Date("Sep 10, 2020 11:30:25").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("demo").innerHTML = days + "d "
+                + hours + "h " + minutes + "m " + seconds + "s ";
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+        console.log(now)
+    </script>
+
+</body>
+
+</html>
